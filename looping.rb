@@ -1,5 +1,12 @@
+require 'pry'
+
 def happy_new_year
-  # your code here
+  count = 10
+  until count == 0
+    puts count
+    count -= 1
+  end
+  puts "Happy New Year!"
 end
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
@@ -20,5 +27,17 @@ def fizzbuzz_printer
 end
 
 def reverse_string(str)
-  # your code here
+  counter = 0
+
+  until counter == str.length
+    counter +=1
+    new_string = ""
+    last_letter = str[-1]
+
+    new_string += last_letter
+    puts new_string
+    # binding.pry
+  end
 end
+
+reverse_string("hello")
